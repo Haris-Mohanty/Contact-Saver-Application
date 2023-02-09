@@ -1,0 +1,64 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.login-form{
+  position: relative;
+}
+.login-form h2{
+  color: #59CAD2;
+  font-size: 35px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+.login-form i{
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #59CAD2;
+  color: #59CAD2;
+ margin: 5px 6px;  /*for top 5px and for left and right 6px */
+  font-size: 19px;
+}
+.login-form a{
+  text-decoration: none;
+  color: #59CAD2;
+  font-size: 17px;
+  font-family: verdana ;
+}
+.login-form button{
+  width: 150px;
+  background-color: #14c4ff;
+  color: #fff;
+  border-radius: 25px;
+}
+.login-form button:hover{
+  background-color: #0e90e1;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 17px;
+  font-family: verdana;
+}
+.login-form .active-box{
+  width: 100%;
+  height:100%;
+  background-image: linear-gradient(to right , #83ceef , #39c5f4 );
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-form .active-box h2{
+  color: #fff;
+}
+.login-form .active-box p{
+  font-size: 17px;
+  font-family: verdana;
+}
+.login-form .active-box button{
+  border: 2px solid #fff;
+}
