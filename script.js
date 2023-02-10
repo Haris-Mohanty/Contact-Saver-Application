@@ -1,10 +1,11 @@
-let lActive = document.getElementById("l-active-btn"); ///using getElementById 
+let lActive = document.getElementById("l-active-btn");
 let sActive = document.getElementById("s-active-btn");
 
 
-let l_active_el = document.querySelector(".l-active");  //using querySelector
+let l_active_el = document.querySelector(".l-active");  
 let s_active_el = document.querySelector(".s-active");
 
+//signup
 sActive.onclick = function(){
 s_active_el.style.opacity = "0";
 s_active_el.classList = "animate__animated animate__fadeOutUp active-box s-active";   // It is a Class....After installing Animate.css, add the class animate__animated to an element, along with any of the animation names (don't forget the animate__ prefix!)
@@ -13,13 +14,7 @@ l_active_el.style.opacity = "1";
 l_active_el.style.zIndex = "1";
 l_active_el.classList = "animate__animated animate__fadeInDown active-box l-active";
 }
-
-// console.log(lActive)
-// console.log(sActive)
-// console.log(l_active_el)
-// console.log(s_active_el) 
-
-
+//sign in
 lActive.onclick = function(){
 l_active_el.style.opacity = "0";
 l_active_el.classList = "animate__animated animate__fadeOutUp active-box s-active";   // It is a Class....After installing Animate.css, add the class animate__animated to an element, along with any of the animation names (don't forget the animate__ prefix!)
@@ -29,7 +24,7 @@ s_active_el.style.zIndex = "1";
 s_active_el.classList = "animate__animated animate__fadeInDown active-box l-active";
 }
 
-//Signup coding
+//Signup coding start
 
 let signup_btn = document.querySelector(".signup-btn");
 let f_name = document.querySelector("#f-name");
@@ -39,7 +34,7 @@ let s_password = document.querySelector("#s-password");
 let s_alert = document.querySelector("#s-alert")
 
 signup_btn.onclick = function(e){
-  e.preventDefault(); //Stop the behaviour of from
+  e.preventDefault(); //Stop the defalut behaviour of from
      if (f_name.value != "" || l_name.value != "" || s_emailaddress.value != "" || s_password.value != "") 
      {
        if (localStorage.getItem(s_emailaddress.value) == null)
@@ -82,9 +77,9 @@ signup_btn.onclick = function(e){
     },3000)
   }
 }
+//Signup coding end
 
-
-//LOGIN CODEING  
+//LOGIN CODEING  start
 
 let login_btn = document.querySelector("#login-btn");
 let s_emailaddresslogin = document.querySelector("#emailaddress");
@@ -129,3 +124,4 @@ login_btn.onclick = function (e){
     },3000)
   }
 }
+//LOGIN CODEING  END
