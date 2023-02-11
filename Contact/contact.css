@@ -7,6 +7,10 @@
   background-color: #28bef0;
   height: 80vh;
   border-radius: 25px;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar{
+  width:5px;
 }
 .contact-list-box .user-icon i{
   cursor: pointer;
