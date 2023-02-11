@@ -20,4 +20,16 @@
 }
 .accordion i{
   font-size: 25px;
+  cursor: pointer;
+}
+.option-box{
+  width: 40px;
+  padding: 0;
+  border: 2px solid #096786;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: -14px;
+  opacity: 0;
 }
