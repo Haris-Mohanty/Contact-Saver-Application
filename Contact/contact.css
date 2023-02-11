@@ -13,3 +13,11 @@
   color: #c626f2;
   font-size: 45px;
 }
+.accordion .accordion-item button{
+  box-shadow: none;
+  border: none;
+  font-size: 22px;
+}
+.accordion i{
+  font-size: 25px;
+}
