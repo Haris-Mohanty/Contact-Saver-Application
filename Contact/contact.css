@@ -10,7 +10,6 @@
 }
 .contact-list-box .user-icon i{
   cursor: pointer;
-/*   color: blue; */
-  font-size: 37px;
-  
+  color: #c626f2;
+  font-size: 45px;
 }
