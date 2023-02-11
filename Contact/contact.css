@@ -1,3 +1,16 @@
 *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contact-list-box{
+  background-color: #28bef0;
+  height: 80vh;
+  border-radius: 25px;
+}
+.contact-list-box .user-icon i{
+  cursor: pointer;
+/*   color: blue; */
+  font-size: 37px;
   
 }
