@@ -6,7 +6,7 @@
 .contact-list-box{
   background-color: #28bef0;
   height: 80vh;
-  border-radius: 25px;
+  border-radius: 14px;
   overflow-y: scroll;
 }
 ::-webkit-scrollbar{
