@@ -17,5 +17,5 @@ sessionStorage.removeItem("username");
 //Welcome code Start
 let welcome = document.getElementById("welcome");
 let user_data = JSON.parse(localStorage.getItem(username));
-
+welcome.innerHTML ="Welcome "+user_data.f_name +" "+ user_data.l_name;
 //Welcome code End
