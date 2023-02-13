@@ -13,3 +13,9 @@ window.location ="../index.html";
 sessionStorage.removeItem("username"); 
 })
 // LOGOUT CODE END
+
+//Welcome code Start
+let welcome = document.getElementById("welcome");
+let user_data = JSON.parse(localStorage.getItem(username));
+
+//Welcome code End
