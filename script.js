@@ -98,7 +98,7 @@ login_btn.onclick = function (e){
 
       if (s_passwordlogin.value == password) {
         window.location = "Contact/contact.html";
-        sessionStorage.setItem("Email Address" , s_emailaddresslogin.value);
+        sessionStorage.setItem("username" , s_emailaddresslogin.value);
       }
       else{
         l_alert.innerHTML = "Password is incorrect !";

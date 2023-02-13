@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+.illigal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  min-height: 100vh;
+}
+.illigal h1{
+  font-size: 45px;
+}
 .contact-list-box{
   background-color: #28bef0;
   height: 80vh;
