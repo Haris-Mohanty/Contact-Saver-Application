@@ -32,6 +32,18 @@ createBtn.onclick = function(e) {
 const newContactAdd = () => {
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
+let accordion_item = document.createElement("DIV");
+  accordion_item.classList = "accordion-item";
+let accordion_header = document.createElement("H5");
+accordion_header.classList = "accordion-header";
+let accordion_button = document.createElement("BUTTON");
+accordion_button.classList = "accordion-button";
+let accordion_collapse = document.createElement("DIV");
+ accordion_collapse.classList = "accordion-collapse collapse";
+let accordion_body = document.createElement("DIV");
+ accordion_body.classList = "accordion-body";
+let row = document.createElement("DIV");
+ accordion_body.classList = "accordion-body";
   
 }
 //CREATE CONTACT CODE END
