@@ -40,10 +40,14 @@ accordion_header.classList = "accordion-header";
   accordion_item.append(accordion_header);
 let accordion_button = document.createElement("BUTTON");
 accordion_button.classList = "accordion-button";
-  accordion_header.append(acccordion_button);
+  accordion_button.innerText = "Haris";
+  accordion_button.setAttribute("data-bs-toggle", "collapse");
+  accordion_button.setAttribute("data-bs-target", "#collapse-1");
+  accordion_header.append(accordion_button);
 let accordion_collapse = document.createElement("DIV");
  accordion_collapse.classList = "accordion-collapse collapse";
-  accordion_item.append(accccordion_collapse);
+  accordion_collapse.id = "collapse-1";
+  accordion_item.append(accordion_collapse);
 let accordion_body = document.createElement("DIV");
  accordion_body.classList = "accordion-body";
   accordion_collapse.append(accordion_body);
@@ -54,14 +58,19 @@ let col1 = document.createElement("DIV");
  col1.classList = "col-md-6";
   row.append(col1);
 let h5 = document.createElement("H5");
+  h5.innerText = "Haris";
+  col1.append(h5);
 let p = document.createElement("P");
+  p.innerText = "8658763042";
+  col1.append(p);
 let col2 = document.createElement("DIV");
  col2.classList = "col-md-6 d-flex justify-content-around align-items-center position-relative";
 col2.innerHTML = '<i class="fa-regular fa-message"></i><i class="fa-solid fa-square-phone"></i><i class="fa-solid fa-ellipsis-vertical"></i>';
+  row.append(col2);
 let option_box = document.createElement("DIV");
  option_box.classList = "option-box";
 option_box.innerHTML = '<i class="fa-regular fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>';
-
+col2.append(option_box);
   contact_detail.append(accordion);
 }
 //CREATE CONTACT CODE END
