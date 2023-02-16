@@ -26,7 +26,11 @@ let contact_detail = document.querySelector(".contact-details");
 
 createBtn.onclick = function(e) {
   e.preventDefault();
-  newContactAdd();
+  if(input_name.value != "" && input_number.value != ""){
+     newContactAdd();
+  }else{
+    
+  }
 }
 
 const newContactAdd = () => {
@@ -74,3 +78,6 @@ col2.append(option_box);
   contact_detail.append(accordion);
 }
 //CREATE CONTACT CODE END
+
+let input_name = document.querySelector(".name");
+let input_number = document.querySelector(".number");
