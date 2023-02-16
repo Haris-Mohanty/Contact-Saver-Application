@@ -24,16 +24,22 @@ welcome.innerHTML = "Welcome " + user_data.f_name + " " + user_data.l_name;
 let createBtn = document.querySelector(".create-btn");
 let contact_detail = document.querySelector(".contact-details");
 
+let input_name = document.querySelector(".name");
+let input_number = document.querySelector(".number");
+
 createBtn.onclick = function(e) {
   e.preventDefault();
   if(input_name.value != "" && input_number.value != ""){
      newContactAdd();
   }else{
-    
+    swal("Empty Field!", "Please fill the input field!", "warning");
   }
 }
 
 const newContactAdd = () => {
+  let name = input_name.value;
+  let number = input_number.value;
+  //Accordion Create
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
 let accordion_item = document.createElement("DIV");
@@ -78,6 +84,3 @@ col2.append(option_box);
   contact_detail.append(accordion);
 }
 //CREATE CONTACT CODE END
-
-let input_name = document.querySelector(".name");
-let input_number = document.querySelector(".number");
