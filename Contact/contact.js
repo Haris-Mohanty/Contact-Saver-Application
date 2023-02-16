@@ -82,5 +82,7 @@ let option_box = document.createElement("DIV");
 option_box.innerHTML = '<i class="fa-regular fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>';
 col2.append(option_box);
   contact_detail.append(accordion);
+  input_name.value = "";
+  input_number.value = "";
 }
 //CREATE CONTACT CODE END
