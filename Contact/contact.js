@@ -42,6 +42,9 @@ const newContactAdd = () => {
   //Accordion Create
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
+
+let all_accordion = contact_detail.getElementsByClassName("")
+  
 let accordion_item = document.createElement("DIV");
   accordion_item.classList = "accordion-item";
   accordion.append(accordion_item);
