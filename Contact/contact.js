@@ -50,7 +50,7 @@ accordion_header.classList = "accordion-header";
   accordion_item.append(accordion_header);
 let accordion_button = document.createElement("BUTTON");
 accordion_button.classList = "accordion-button";
-  accordion_button.innerText = "Haris";
+  accordion_button.innerText = name;
   accordion_button.setAttribute("data-bs-toggle", "collapse");
   accordion_button.setAttribute("data-bs-target", "#collapse-1");
   accordion_header.append(accordion_button);
