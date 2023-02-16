@@ -37,14 +37,17 @@ createBtn.onclick = function(e) {
 }
 
 const newContactAdd = () => {
+  let i;
   let name = input_name.value;
   let number = input_number.value;
   //Accordion Create
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
-
-let all_accordion = contact_detail.getElementsByClassName("")
-  
+//for new id 
+let all_accordion = contact_detail.getElementsByClassName("accordion");
+  for(i=0; i<all_accordion.length; i++){
+    
+  }
 let accordion_item = document.createElement("DIV");
   accordion_item.classList = "accordion-item";
   accordion.append(accordion_item);
@@ -55,11 +58,11 @@ let accordion_button = document.createElement("BUTTON");
 accordion_button.classList = "accordion-button";
   accordion_button.innerText = name;
   accordion_button.setAttribute("data-bs-toggle", "collapse");
-  accordion_button.setAttribute("data-bs-target", "#collapse-1");
+  accordion_button.setAttribute("data-bs-target", "#collapse-"+i);
   accordion_header.append(accordion_button);
 let accordion_collapse = document.createElement("DIV");
  accordion_collapse.classList = "accordion-collapse collapse";
-  accordion_collapse.id = "collapse-1";
+  accordion_collapse.id = "collapse-"+i;
   accordion_item.append(accordion_collapse);
 let accordion_body = document.createElement("DIV");
  accordion_body.classList = "accordion-body";
