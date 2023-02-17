@@ -43,11 +43,13 @@ const newContactAdd = () => {
   //Accordion Create
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
+  
 //for new id 
 let all_accordion = contact_detail.getElementsByClassName("accordion");
   for(i=0; i<all_accordion.length; i++){
     
   }
+  
 let accordion_item = document.createElement("DIV");
   accordion_item.classList = "accordion-item";
   accordion.append(accordion_item);
@@ -87,8 +89,24 @@ let option_box = document.createElement("DIV");
  option_box.classList = "option-box";
 option_box.innerHTML = '<i class="fa-regular fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>';
 col2.append(option_box);
+  
   contact_detail.append(accordion);
+  
   input_name.value = "";
   input_number.value = "";
 }
 //CREATE CONTACT CODE END
+
+
+//DATA STORE IN LOCAL STORAGE START
+
+function updateLocalStorage(){
+  let i;
+  let accordion_el = contact_detail.querySelectorAll(".accordion");
+  for(i=0; i<accordion_el.length; i++){
+    
+  }
+  
+}
+updateLocalStorage();
+//DATA STORE IN LOCAL STORAGE END
