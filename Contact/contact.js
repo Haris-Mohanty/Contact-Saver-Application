@@ -113,7 +113,7 @@ function updateLocalStorage(){
       co_number : p[0].innerHTML
     });
   }
-  localStorage.setItem("list", JSON.stringify(array_list));
+  localStorage.setItem(username+"_list", JSON.stringify(array_list));
 }
 
 //DATA STORE IN LOCAL STORAGE END
