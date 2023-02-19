@@ -4,6 +4,7 @@ if (username == null) {
   document.body.innerHTML = "<h1>404 Not Found!</h1>";
   document.body.classList.add("illigal");
 }
+
 // LOGOUT CODE START
 let logoutBtn = document.getElementById("logout-btn");
 logoutBtn.style.cursor = "pointer";
@@ -108,12 +109,13 @@ function updateLocalStorage(){
   for(i=0; i<accordion_el.length; i++){
     let h5 = accordion_el[i].getElementsByTagName("H5");
     let p = accordion_el[i].getElementsByTagName("P");
+    
     array_list.push({
       co_name : h5[1].innerHTML,
       co_number : p[0].innerHTML
     });
   }
+  
   localStorage.setItem(username+"_list", JSON.stringify(array_list));
 }
-
 //DATA STORE IN LOCAL STORAGE END
