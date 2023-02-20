@@ -38,7 +38,13 @@ createBtn.onclick = function(e) {
   }
 }
 
-const newContactAdd = () => {
+let array_list = JSON.parse(localStorage.getItem(username+"_list"));
+array_list.forEach(task =>{
+  newContactAdd(task);
+});
+
+const newContactAdd = (task) => {
+  console.log(task)
   let i;
   let name = input_name.value;
   let number = input_number.value;
@@ -104,7 +110,7 @@ col2.append(option_box);
 
 function updateLocalStorage(){
   let i;
-  let array_list = [];
+  array_list = [];
   let accordion_el = contact_detail.querySelectorAll(".accordion");
   for(i=0; i<accordion_el.length; i++){
     let h5 = accordion_el[i].getElementsByTagName("H5");
@@ -119,3 +125,4 @@ function updateLocalStorage(){
   localStorage.setItem(username+"_list", JSON.stringify(array_list));
 }
 //DATA STORE IN LOCAL STORAGE END
+
