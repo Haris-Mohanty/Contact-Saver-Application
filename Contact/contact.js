@@ -4,7 +4,6 @@ if (username == null) {
   document.body.innerHTML = "<h1>404 Not Found!</h1>";
   document.body.classList.add("illigal");
 }
-
 // LOGOUT CODE START
 let logoutBtn = document.getElementById("logout-btn");
 logoutBtn.style.cursor = "pointer";
@@ -32,19 +31,12 @@ createBtn.onclick = function(e) {
   e.preventDefault();
   if(input_name.value != "" && input_number.value != ""){
      newContactAdd();
-    updateLocalStorage();
   }else{
     swal("Empty Field!", "Please fill the input field!", "warning");
   }
 }
 
-let array_list = JSON.parse(localStorage.getItem(username+"_list"));
-array_list.forEach(task =>{
-  newContactAdd(task);
-});
-
-const newContactAdd = (task) => {
-  console.log(task)
+const newContactAdd = () => {
   let i;
   let name = input_name.value;
   let number = input_number.value;
@@ -104,25 +96,3 @@ col2.append(option_box);
   input_number.value = "";
 }
 //CREATE CONTACT CODE END
-
-
-//DATA STORE IN LOCAL STORAGE START
-
-function updateLocalStorage(){
-  let i;
-  array_list = [];
-  let accordion_el = contact_detail.querySelectorAll(".accordion");
-  for(i=0; i<accordion_el.length; i++){
-    let h5 = accordion_el[i].getElementsByTagName("H5");
-    let p = accordion_el[i].getElementsByTagName("P");
-    
-    array_list.push({
-      co_name : h5[1].innerHTML,
-      co_number : p[0].innerHTML
-    });
-  }
-  
-  localStorage.setItem(username+"_list", JSON.stringify(array_list));
-}
-//DATA STORE IN LOCAL STORAGE END
-
