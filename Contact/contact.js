@@ -51,11 +51,12 @@ function newContactAdd(task) {
   let name = input_name.value;
   let number = input_number.value;
 
-
+//SHOWING CONTACT IN PAGE FROM LOCALSTORAGE CODE START
   if(task){
     name = task.co_name;
     number = task.co_number;
   }
+//SHOWING CONTACT IN PAGE FROM LOCALSTORAGE CODE END
   //Accordion Create
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
@@ -99,7 +100,7 @@ let p = document.createElement("P");
   col1.append(p);
 let col2 = document.createElement("DIV");
  col2.classList = "col-md-6 d-flex justify-content-around align-items-center position-relative";
-col2.innerHTML = '<i class="fa-regular fa-message"></i><i class="fa-solid fa-square-phone"></i><i class="fa-solid fa-ellipsis-vertical"></i>';
+col2.innerHTML = '<i class="fa-regular fa-message"></i><i class="fa-solid fa-square-phone"></i><i class="fa-solid fa-ellipsis-vertical op-btn"></i>';
   row.append(col2);
 let option_box = document.createElement("DIV");
  option_box.classList = "option-box";
@@ -110,6 +111,11 @@ col2.append(option_box);
   
   input_name.value = "";
   input_number.value = "";
+
+  //OPTION BUTTON(3 cDOT) CODE START
+  let op_btn = document.querySelectorAll(".op-btn");
+  
+  //OPTION BUTTON(3 DOT) CODE END
 }
 //CREATE CONTACT CODE END
 
