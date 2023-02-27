@@ -37,17 +37,23 @@ createBtn.onclick = function(e) {
   }
 }
 
-//GET DATA FRPM LOCALSTOREAGE CODE START
+//GET DATA FROM LOCALSTOREAGE CODE START
 let array_list = JSON.parse(localStorage.getItem(username+"_list"));
 array_list.forEach(task =>{
-  
+  newContactAdd(task);
 });
-//GET DATA FRPM LOCALSTOREAGE CODE END
+//GET DATA FROM LOCALSTOREAGE CODE END
 
-const newContactAdd = () => {
+function newContactAdd(task) {
   let i;
   let name = input_name.value;
   let number = input_number.value;
+
+
+  if(task){
+    name = task.co_name;
+    number = task.co_number;
+  }
   //Accordion Create
 let accordion = document.createElement("DIV");
   accordion.classList = "accordion mb-3";
