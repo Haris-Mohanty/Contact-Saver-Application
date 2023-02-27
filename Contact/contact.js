@@ -38,10 +38,12 @@ createBtn.onclick = function(e) {
 }
 
 //GET DATA FROM LOCALSTOREAGE CODE START
-let array_list = JSON.parse(localStorage.getItem(username+"_list"));
-array_list.forEach(task =>{
+if(localStorage.getItem(username+"_list") != null){
+  let array_list = JSON.parse(localStorage.getItem(username+"_list"));
+  array_list.forEach(task =>{
   newContactAdd(task);
 });
+}
 //GET DATA FROM LOCALSTOREAGE CODE END
 
 function newContactAdd(task) {
