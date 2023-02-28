@@ -104,7 +104,7 @@ col2.innerHTML = '<i class="fa-regular fa-message"></i><i class="fa-solid fa-squ
   row.append(col2);
 let option_box = document.createElement("DIV");
  option_box.classList = "option-box";
-option_box.innerHTML = '<i class="fa-regular fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>';
+option_box.innerHTML = '<i class="fa-regul]ar fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>';
 col2.append(option_box);
   
   contact_detail.append(accordion);
@@ -114,7 +114,13 @@ col2.append(option_box);
 
   //OPTION BUTTON(3 cDOT) CODE START
   let op_btn = document.querySelectorAll(".op-btn");
-  
+  for(i=0; i<op_btn.length; i++){
+    op_btn[i].onclick = function() {
+      let parent = this.parentElement;
+      let op_box = parent.querySelector(".option-box");
+     op_box.classList.add("active");
+    }
+  }
   //OPTION BUTTON(3 DOT) CODE END
 }
 //CREATE CONTACT CODE END
