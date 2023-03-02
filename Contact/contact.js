@@ -64,7 +64,6 @@ let all_accordion = contact_detail.getElementsByClassName("accordion");
   }
   
   //ACCORDION CODE START
-
 contact_detail.innerHTML += `
  <div class="accordion mb-3">
        <div class="accordion-item">
@@ -97,11 +96,19 @@ contact_detail.innerHTML += `
        </div>
  </div>
 `;
-  
   //ACCORDION CODE END
   
   input_name.value = "";
   input_number.value = "";
+
+  // EDIT & DELETE CODE START
+  let option_box = document.querySelector(".option-box");
+  let i_tag = option_box.getElementsByTagName("I");
+
+  i_tag[1].onclick = function() {
+    alert();
+  }
+  // EDIT & DELETE CODE END
   
   //OPTION BUTTON(3 cDOT) CODE START
   let op_btn = document.querySelectorAll(".op-btn");
@@ -117,7 +124,6 @@ contact_detail.innerHTML += `
 //CREATE CONTACT CODE END
 
 //DATA STORE IN LOCAL STORAGE START
-
 function updateLocalStorage(){
   let i;
   array_list = [];
@@ -133,5 +139,4 @@ function updateLocalStorage(){
   
   localStorage.setItem(username+"_list", JSON.stringify(array_list));
 }
-
 //DATA STORE IN LOCAL STORAGE END
