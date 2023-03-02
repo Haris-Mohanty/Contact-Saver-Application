@@ -119,6 +119,7 @@ contact_detail.innerHTML += `
     .then((willDelete) => {
         if (willDelete) {
           parent.remove();
+          updateLocalStorage();//delete from database
        swal("Poof! Your imaginary file has been deleted!", {
        icon: "success",
       });
