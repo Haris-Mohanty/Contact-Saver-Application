@@ -50,13 +50,22 @@
 }
 .option-box.active{
   opacity: 1;
-  border: 0;
-}
-.anim{
-  animation-name: animate__bounceInLeft;
   animation-duration: 4s;
+  border: 0;
 }
 .create-btn button{
   background-color:#072497;
   color:#fff;
+}
+.create-btn button:hover{
+  background-color: #0aa7b2;
+}
+#welcome{
+  color: #7f08aa;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#welcome:hover{
+  color: #7b2cf2;
 }

@@ -86,7 +86,7 @@ contact_detail.innerHTML += `
                        <i class="fa-solid fa-square-phone"></i>
                        <i class="fa-solid fa-ellipsis-vertical op-btn"></i>
                        
-                        <div class="option-box">
+                        <div class="option-box animate__animated animate__zoomIn border-0">
                          <i class="fa-regular fa-pen-to-square mb-1"></i>
                          <i class="fa-solid fa-trash"></i>
                         </div>
@@ -110,7 +110,6 @@ contact_detail.innerHTML += `
       let parent = this.parentElement;
       let op_box = parent.querySelector(".option-box");
      op_box.classList.add("active");
-     op_box.classList.add("anim");
     }
   }
   //OPTION BUTTON(3 DOT) CODE END
