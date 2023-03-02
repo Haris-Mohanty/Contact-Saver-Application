@@ -59,8 +59,8 @@ function newContactAdd(task) {
 //SHOWING CONTACT IN PAGE FROM LOCALSTORAGE CODE END
 //for new id 
 let all_accordion = contact_detail.getElementsByClassName("accordion");
-  for(i=0; i<all_accordion.length; i++){
-    
+  
+  for(i=0; i<all_accordion.length; i++){ 
   }
   
   //ACCORDION CODE START
@@ -87,7 +87,7 @@ contact_detail.innerHTML += `
                        
                         <div class="option-box animate__animated animate__zoomIn border-0">
                          <i class="fa-regular fa-pen-to-square mb-1"></i>
-                         <i class="fa-solid fa-trash"></i>
+                         <i class="fa-solid fa-trash del"></i>
                         </div>
                  </div>
                 </div>
@@ -102,29 +102,32 @@ contact_detail.innerHTML += `
   input_number.value = "";
 
   // EDIT & DELETE CODE START
-  let option_box = document.querySelector(".option-box");
-  let i_tag = option_box.getElementsByTagName("I");
-
-  i_tag[1].onclick = function() {
-    //swal start
-    swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-})
-.then((willDelete) => {
-  if (willDelete) {
-    
-    swal("Poof! Your imaginary file has been deleted!", {
-      icon: "success",
-    });
-  } else {
+  let i_del = contact_detail.querySelectorAll(".del");
+  for(i=0; i<i_del.length; i++){
+    i_del[i].onclick = function(){
+      let parent = this.parentElement.
+        parentElement.parentElement.parentElement.
+        parentElement.parentElement.parentElement;
+      //swal start
+          swal({
+       title: "Are you sure?",
+       text: "Once deleted, you will not be able to recover this imaginary file!",
+       icon: "warning",
+       buttons: true,
+       dangerMode: true,
+     })
+    .then((willDelete) => {
+        if (willDelete) {
+          parent.remove();
+       swal("Poof! Your imaginary file has been deleted!", {
+       icon: "success",
+      });
+    } else {
     swal("Your imaginary file is safe!");
-  }
-});
-    //swal end
+    }
+  });
+      //swal end
+    }
   }
   // EDIT & DELETE CODE END
   
