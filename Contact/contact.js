@@ -106,7 +106,25 @@ contact_detail.innerHTML += `
   let i_tag = option_box.getElementsByTagName("I");
 
   i_tag[1].onclick = function() {
-    alert();
+    //swal start
+    swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    
+    swal("Poof! Your imaginary file has been deleted!", {
+      icon: "success",
+    });
+  } else {
+    swal("Your imaginary file is safe!");
+  }
+});
+    //swal end
   }
   // EDIT & DELETE CODE END
   
