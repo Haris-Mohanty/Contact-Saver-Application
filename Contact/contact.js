@@ -86,7 +86,7 @@ contact_detail.innerHTML += `
                        <i class="fa-solid fa-ellipsis-vertical op-btn"></i>
                        
                         <div class="option-box animate__animated animate__zoomIn border-0">
-                         <i class="fa-regular fa-pen-to-square mb-1"></i>
+                         <i class="fa-regular fa-pen-to-square edit mb-1"></i>
                          <i class="fa-solid fa-trash del"></i>
                         </div>
                  </div>
@@ -101,7 +101,16 @@ contact_detail.innerHTML += `
   input_name.value = "";
   input_number.value = "";
 
-  // EDIT & DELETE CODE START
+// EDIT CODE START
+  let i_edit = contact_detail.querySelectorAll(".edit");
+  for(i=0; i<i_edit.length; i++){
+    i_edit[i].onclick = function(){
+      alert();
+    }
+  }
+// EDIT CODE END
+  
+  // DELETE CODE START
   let i_del = contact_detail.querySelectorAll(".del");
   for(i=0; i<i_del.length; i++){
     i_del[i].onclick = function(){
@@ -130,7 +139,7 @@ contact_detail.innerHTML += `
       //swal end
     }
   }
-  // EDIT & DELETE CODE END
+  //DELETE CODE END
   
   //OPTION BUTTON(3 cDOT) CODE START
   let op_btn = document.querySelectorAll(".op-btn");
