@@ -22,6 +22,7 @@ welcome.innerHTML = "Welcome " + user_data.f_name + " " + user_data.l_name;
 
 //CREATE CONTACT CODE START
 let createBtn = document.querySelector(".create-btn");
+let updateBtn = document.querySelector(".update-btn");
 let contact_detail = document.querySelector(".contact-details");
 
 let input_name = document.querySelector(".name");
@@ -76,7 +77,7 @@ contact_detail.innerHTML += `
             <div class="accordion-body">
                <div class="row">
                 <div class="col-md-6">
-                   <h5>${name}</h5>
+                   <h5 id="contact-${i}">${name}</h5>
                    <p>${number}</p>
                  </div>
                  <div class="col-md-6 d-flex justify-content-around
@@ -114,6 +115,11 @@ contact_detail.innerHTML += `
 
       input_name.value = edited_name;
       input_number.value = edited_co;
+
+      input_name.focus();
+
+      createBtn.classList.add("d-none");
+      updateBtn.classList.remove("d-none");
       
     }
   }

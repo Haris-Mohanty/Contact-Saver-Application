@@ -53,13 +53,13 @@
   animation-duration: 4s;
   border: 0;
 }
-.create-btn button{
+.btn-box button{
   background-color:#072497;
   color:#fff;
   font-family: "Audiowide", sans-serif;
   text-shadow: 2px 2px 2px #ead1ff;
 }
-.create-btn button:hover{
+.btn-box button:hover{
   background-color: #0aa7b2;
 }
 #welcome{
