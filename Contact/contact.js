@@ -105,7 +105,16 @@ contact_detail.innerHTML += `
   let i_edit = contact_detail.querySelectorAll(".edit");
   for(i=0; i<i_edit.length; i++){
     i_edit[i].onclick = function(){
-      alert();
+      let parent = this.parentElement.parentElement.parentElement;
+      let h5 = parent.getElementsByTagName("H5");
+      let p = parent.getElementsByTagName("P");
+
+      let edited_name = h5[0].innerHTML;
+      let edited_co = p[0].innerHTML;
+
+      input_name.value = edited_name;
+      input_number.value = edited_co;
+      
     }
   }
 // EDIT CODE END
