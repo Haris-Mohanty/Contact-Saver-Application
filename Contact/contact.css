@@ -48,6 +48,14 @@
   right: -14px;
   opacity: 0;
 }
+.option-box.active{
+  opacity: 1;
+  border: 0;
+}
+.anim{
+  animation-name: animate__bounceInLeft;
+  animation-duration: 4s;
+}
 .create-btn button{
   background-color:#072497;
   color:#fff;
