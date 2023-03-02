@@ -56,15 +56,18 @@
 .create-btn button{
   background-color:#072497;
   color:#fff;
+  font-family: "Audiowide", sans-serif;
+  text-shadow: 3px 3px 3px #ead1ff;
 }
 .create-btn button:hover{
   background-color: #0aa7b2;
 }
 #welcome{
   color: #7f08aa;
-  font-size: 34px;
+  font-size: 37px;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Sofia", sans-serif;
+  text-shadow: 3px 3px 3px #ead1ff;
 }
 #welcome:hover{
   color: #7b2cf2;
